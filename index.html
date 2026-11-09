@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#112a20"><title>FormFit</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="layout"><aside id="sidebar" aria-label="Main navigation"><div class="brand"><b>F</b><div><strong>FormFit</strong><small>TRAIN WITH PURPOSE</small></div></div><label class="muted" for="account">Demo account</label><select id="account"><option value="maya">Maya Chen · Trainer</option><option value="alex">Alex Morgan · Trainee</option><option value="jamie">Jamie Patel · Trainee</option></select><div id="sideProfile"></div><nav id="nav"></nav><button id="resetDemo" class="reset-demo">Reset demo data</button><p class="tiny muted">Frontend demo · saved in this browser</p></aside><div id="drawerOverlay" class="drawer-overlay" aria-hidden="true"></div><main><header><button id="hamburger" aria-label="Open navigation menu" aria-controls="sidebar" aria-expanded="false">☰</button><div class="mobile-brand">FormFit</div><div><small id="eyebrow">YOUR FITNESS SPACE</small><h1 id="title">Today</h1></div><span id="todayDate"></span></header><section id="app"></section><footer>FormFit prototype · Demo data only</footer></main></div><div id="toast" role="status" aria-live="polite"></div>
+<div id="scannerModal" class="scanner-modal hidden" role="dialog" aria-modal="true" aria-labelledby="scannerTitle">
+  <div class="scanner-panel">
+    <div class="row"><div><h2 id="scannerTitle">Scan trainer QR code</h2><p class="small">Point your camera at Maya's FormFit QR code.</p></div><button id="closeScanner" class="btn outline">Close</button></div>
+    <video id="scannerVideo" playsinline muted></video>
+    <p id="scannerStatus" class="notice">Starting camera…</p>
+    <div class="field"><label>Camera unavailable? Enter the trainer code</label><input id="scannerCode" placeholder="FORM-MAYA-24"></div>
+    <button id="submitScannerCode" class="btn">Send connection request</button>
+    <p class="small">Camera scanning requires browser camera permission and a secure context (localhost or HTTPS). You can use the trainer code as a fallback.</p>
+  </div>
+</div>
+<div id="previewModal" class="preview-modal hidden" role="dialog" aria-modal="true" aria-label="Daily plan preview"></div>
+<input id="photoInput" type="file" accept="image/*" multiple hidden><input id="progressInput" type="file" accept="image/*" hidden><script src="script.js?v=5"></script></body></html>
